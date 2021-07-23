@@ -2,22 +2,32 @@ package main
 
 import (
 	"fmt"
+	// "log"
+
 	"todo_app/app/controllers"
 	"todo_app/app/models"
 )
 
 func main() {
 
-		fmt.Println(models.Db)
+	fmt.Println(models.Db)
 
-		controllers.StartMainServer()
+	controllers.StartMainServer()
 
+	/*
+		//セッション作成
+		user, _ := models.GetUserByEmail("test@test.com")
+		fmt.Println(user)
 
+		session, err := user.CreateSession()
+		if err != nil {
+			log.Println(err)
+		}
+		fmt.Println(session)
 
-
-
-
-
+		valid, _ := session.CheckSession()
+		fmt.Println(valid)
+	*/
 
 	/*
 		fmt.Println(config.Config.Port)
@@ -35,7 +45,7 @@ func main() {
 	// u := &models.User{}
 	// u.Name = "test2"
 	// u.Email = "test2@example.com"
-	// u.PassWord = "testtest"
+	// u.PassWord = "test"
 	// fmt.Println(u)
 
 	// u.CreateUser()
